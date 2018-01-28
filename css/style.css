@@ -60,6 +60,7 @@ header p {
 
 
 nav {
+
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
@@ -69,8 +70,9 @@ nav {
 
 nav ul li a {
     display: block;
-    float: left;
-    width: 25%;
+    float: left ;
+     
+    width: 30%;
     text-align: center;
     padding: 2rem;
     font-size: 1.5rem;

@@ -5,9 +5,7 @@
     function ValidateForm(form, err){
         
         this._formHTML = document.querySelector(form) || document.querySelector('form');
-        this._errorHTML = document.querySelector(err) || document.querySelector('#error');
-        //console.log(this._formHTML);
-        
+        this._errorHTML = document.querySelector(err) || document.querySelector('#error');       
         this._assignEvents();
         
         
@@ -21,25 +19,31 @@
     ValidateForm.prototype._validateFields = function(e){
         this._errors = [];
     
-        if(!e.target[0].value){//==='' - bez !
+        if(!e.target[0].value){
             this._addError('Uzupełnij data urodzenia');
             
         }
-         if(!e.target[1].value){//==='' - bez !
+        
+        this._mailPatern = /^[\d]{4}-[\d]{2}-[\d]{2}$/;
+        if(e.target[1].value && !this._mailPatern.test(e.target[1].value)){
+            this._addError('Pole ma zły format');
+        }
+        
+        if(!e.target[1].value){
             this._addError('Uzupełnij pole email');
             
         }
-        this._textPatern = /^[\w]+[.-]*[a-z\d]*@[\w]+[.-]*[a-z\d]*\.[a-z]{2,8}$/;
+        this._mailPatern = /^[\w]+[.-]*[a-z\d]*@[\w]+[.-]*[a-z\d]*\.[a-z]{2,8}$/;
         if(e.target[1].value && !this._mailPatern.test(e.target[1].value)){
             this._addError('Pole mail musi spełniać wymagania złożoności');
         }
         
-        if(!e.target[2].value){//==='' - bez !
+        if(!e.target[2].value){
             this._addError('Uzupełnij wiadomość');
             
         }
         this._textPatern = /^{6,}$/;
-        if(e.target[2].value && !this._mailPatern.test(e.target[2].value)){
+        if(e.target[2].value && !this._textPaternPatern.test(e.target[2].value)){
             this._addError('Wiadomość jest za krótka');
         }
         
@@ -54,7 +58,7 @@
     ValidateForm.prototype._addError = function(err){
         this._errors.push(err);
         this._printErrors();
-        //console.log(this._errors);
+        
     }
     
     ValidateForm.prototype._printErrors = function(){
