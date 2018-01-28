@@ -7,6 +7,8 @@
         this._formHTML = document.querySelector(form) || document.querySelector('form');
         this._errorHTML = document.querySelector(err) || document.querySelector('#error');       
         this._assignEvents();
+        this._messegeHTML = document.querySelector(msg) || doqument.querySelector('#message')
+       
         
         
     }
@@ -53,6 +55,9 @@
         if(this._errors.length > 0){
             e.preventDefault();
         }
+    }
+    
+        
     }
     
     ValidateForm.prototype._addError = function(err){
