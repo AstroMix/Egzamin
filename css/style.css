@@ -1,0 +1,113 @@
+@import url('reset.css');
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+header {
+    width: 100%;
+    height: 100vh;
+    color: skyblue;
+    line-height: 3rem;
+    position: relative;
+    overflow: hidden;
+    background-color: crimson;
+    
+}
+
+header h1, header p{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.3rem;
+}
+
+header h1 {
+    top: 25%;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3rem;
+     
+}
+
+
+header p {
+    top: 40%;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    
+}
+
+
+
+
+nav {
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav ul li a {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #20417b;
+}
+
+section {
+    padding: 2rem;
+    margin-top: 4rem;
+    min-height: 200px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+section p {
+    line-height: 2.5rem;
+    margin-bottom: 2rem
+}
+
+section:nth-of-type(even){
+    background: url('../img/ksiezyc.jpeg') center/cover no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
