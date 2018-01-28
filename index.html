@@ -42,10 +42,14 @@
 
             
             <div id="error"></div>
+            <div id="message"></div>
             <form>
                <input name="data" id="data"> Podaj date urodzenia (rrrr-mm-dd)<br>
-                <input name='mail' id='mail' autofocus> Podaj mail<br>
-                <textarea cols="30" rows="10"></textarea><br>
+               <div id="errData"></div>
+                <input name="mail" id="mail" autofocus> Podaj mail<br>
+                 <div id="errMail"></div>
+                <textarea id="wiadomosc" cols="30" rows="10" placeholder="Wiadomość musi zawieroć min. 6 znaków"></textarea><br>
+                 <div id="errWiadomosc"></div>
                 <input type="submit" value="Zapisz">        
             </form>
      </div>
